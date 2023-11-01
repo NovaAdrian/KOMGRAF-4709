@@ -1,11 +1,11 @@
 {
-    "version": "2.0.0",
+    "version": "2",
     "tasks": [
         {
             "label": "build",
             "type": "shell",
             "command": "g++",
-            "args": ["main.cpp", "-o", "main", "-std=c++17"], 
+            "args": ["-o", "output.exe", "main.cpp", "-lfreeglut", "-lopengl32", "-lglu32"],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -14,12 +14,11 @@
         {
             "label": "run",
             "type": "shell",
-            "command": "./main",
+            "command": "./output.exe",
             "group": {
                 "kind": "test",
                 "isDefault": true
-            },
-            "dependsOn": "build"
+            }
         }
     ]
 }

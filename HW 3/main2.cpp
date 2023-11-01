@@ -1,15 +1,15 @@
 #include <GL/freeglut.h>
 
-int x1 = 12, y1 = 1; // Koordinat awal
-int x2 = 2, y2 = 8;  // Koordinat akhir
+int x1 = 2, y1 = 12; // Koordinat awal
+int x2 = 4, y2 = 10; // Koordinat akhir
 
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(1.0, 1.0, 1.0); // Warna putih
     glBegin(GL_LINES);
-    glVertex2f(x1 / 12.0, y1 / 8.0); // Normalisasi koordinat
-    glVertex2f(x2 / 12.0, y2 / 8.0);
+    glVertex2f(x1 / 12.0, y1 / 12.0); // Normalisasi koordinat
+    glVertex2f(x2 / 12.0, y2 / 12.0);
     glEnd();
     glFlush();
 }
